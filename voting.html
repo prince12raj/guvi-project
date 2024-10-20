@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECTION COMMISSION OF INDIA</title>
+    <link rel="stylesheet" href="voting.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="#" id="abc">Menu |</a>
+            <a href="login.html">ONLINE VOTING SYSTEM</a>
+            <a href="#">| Toll free-1950 |</a>
+            <a href="#">Screen reader access |</a>
+            <button id="increase-font">A+</button>
+            <button id="decrease-font">A-</button>
+            <button id="hindi">Hindi me dekhe</button>
+        </nav>
+    </header>
+
+    <hr color="pink">
+
+    <section id="ev-section">
+        <h1>Choose Your Candidate</h1>
+        <div id="evm-images">
+            <img src="https://www.eci.gov.in/newimg/EVM/1.jpg" height="200" alt="EVM Image 1" onclick="openModal(this)">
+            <img src="https://www.eci.gov.in/newimg/EVM/2.jpg" height="200" alt="EVM Image 2" onclick="openModal(this)">
+            <img src="https://www.eci.gov.in/newimg/EVM/3.jpg" height="200" alt="EVM Image 3" onclick="openModal(this)">
+            <img src="https://www.eci.gov.in/newimg/EVM/4.jpg" height="200" alt="EVM Image 4" onclick="openModal(this)"><br>
+            <img src="https://www.eci.gov.in/newimg/EVM/5.jpg" height="200" alt="EVM Image 5" onclick="openModal(this)">
+            <img src="https://www.eci.gov.in/newimg/EVM/6.jpg" height="200" alt="EVM Image 6" onclick="openModal(this)">
+            <img src="https://www.eci.gov.in/newimg/EVM/7.jpg" height="200" alt="EVM Image 7" onclick="openModal(this)">
+            <img src="https://www.eci.gov.in/newimg/EVM/8.jpg" height="200" alt="EVM Image 8" onclick="openModal(this)"><br>
+            <img src="https://www.eci.gov.in/newimg/EVM/9.png" height="200" alt="EVM Image 9" onclick="openModal(this)">
+        </div>
+    </section>
+
+    <div id="image-modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="caption"></div>
+    </div>
+    <div id="but">
+        <a id = "abcd" href="candidate.html"><H1>CLICK HERE TO CHOSE YOUR CANDIDATE </H1></a>
+    </div>
+
+    <footer class="footer">
+        <h1>ONLINE VOTING YOUR CANDIDATE</h1>
+        <p id="cc">
+            Voting systems are critical for the functioning of democracies and the representation of citizens' voices in governance. As technology evolves, the methods of voting continue to change, presenting both opportunities and challenges. A successful voting system must prioritize security, accessibility, and transparency while continually adapting to the needs of the electorate.
+        </p>
+    </footer>
+
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById("image-modal");
+            const modalImg = document.getElementById("modal-image");
+            const captionText = document.getElementById("caption");
+
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        function closeModal() {
+            document.getElementById("image-modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>

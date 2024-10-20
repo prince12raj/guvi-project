@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register Page</title>
+    <link rel="stylesheet" href="olvs.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://media.istockphoto.com/id/1410535683/photo/the-concept-of-electronic-voting-in-elections-voice-of-the-people-means-the-opinion-of-the.jpg?s=612x612&w=0&k=20&c=eS7PYuVsF5TV0GTT3EF0BTRLgJKe-phePeFxht6_fes=" alt="Voting Concept">
+            <h1>Online Choosing Your Candidate</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="form-container">
+            <form id="loginForm">
+                <h2>Candidate Login</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="button" id="loginButton">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+            </form>
+
+            <form id="registerForm" style="display: none;">
+                <h2>Register</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="button" id="registerButton">Register</button>
+                <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img src="https://www.shutterstock.com/image-photo/electronic-internet-voting-concept-evoting-600nw-2232562143.jpg" alt="E-voting" class="footer-image">
+            <div class="footer-text">
+                <p>India International Institute of Democracy and Election Management</p>
+                <p>The Election Commission of India (ECI), established the India International Institute of Democracy and Election Management (IIIDEM) to advance its professional competence in election management, promote people's participation, contribute to developing stronger democratic institutions and support the efforts of ECI in carrying out its mandate and functions.</p>
+                <p>Over the last six decades, the structure and functions of the Election Commission have undergone major changes and thus the management of elections has become increasingly complex. A rapid transformation in social context and reality, rising number of political parties, changing dynamics and demands of coalitions and alliances, frequent elections and bye-elections, increase in number of eligible voters and continuous updating of electoral rolls have led to new challenges for election management bodies of today.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
