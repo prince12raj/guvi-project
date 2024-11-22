@@ -1,14 +1,14 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('https://electionbuddy.com/wp-content/uploads/2022/01/Voting-image-6-scaled.jpg');
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://electionbuddy.com/wp-content/uploads/2022/01/Voting-image-6-scaled.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
 }
 
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     padding: 20px;
     text-align: center;
 }
@@ -17,78 +17,105 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 15px;
 }
 
 .header-content img {
-    width: 50px; /* Adjust the size of the header image */
-    height: 50px;
-    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 
 h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #00bcd4;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 160px); /* Adjust height to account for header and footer */
+    height: calc(100vh - 160px);
 }
 
 .form-container {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    width: 300px;
+    text-align: center;
 }
 
-h2 {
+.form h2 {
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 14px;
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    background: #4CAF50;
+    padding: 12px;
+    margin-top: 10px;
+    background: #00bcd4;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background: #45a049;
+    background: #008c9e;
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    text-align: center;
+    color: #bbb;
 }
 
 .footer-content {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .footer-image {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 
-.footer-text {
-    flex-grow: 1;
+.footer-text p {
+    margin: 5px 0;
+    line-height: 1.6;
 }

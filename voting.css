@@ -1,15 +1,20 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    color: #fff;
+    background: url('https://i.pinimg.com/736x/7c/99/f1/7c99f1dcda9b6cbca0f6e6f8cc8ad54b.jpg') no-repeat center center;
+    background-size: contain; /* Ensures the image is fully visible */
+    background-color: #004B87; /* Fallback color for areas not covered by the image */
+    background-attachment: fixed; /* Keeps the image in place during scrolling */
+    height: 100vh; /* Makes the image cover the full screen height */
 }
 
 header {
-    background-color: #004B87; /* Dark blue */
-    color: white;
-    padding: 10px 20px;
+    background-color: rgba(0, 75, 135, 0.8); /* Transparent Dark Blue */
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 #navbar {
@@ -19,89 +24,94 @@ header {
 }
 
 #navbar a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    font-weight: bold;
+    margin: 0 15px;
 }
 
-button {
-    margin: 0 5px;
-    background-color: white;
+#nav-buttons button {
+    background-color: #ffd700; /* Gold */
     color: #004B87;
+    font-weight: bold;
+    padding: 8px 12px;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #e0e0e0;
+#nav-buttons button:hover {
+    background-color: #ffa500;
 }
 
-#logo-container {
+.banner {
     text-align: center;
-    margin: 20px 0;
+    padding: 80px 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.2rem;
 }
 
 #ev-section {
     text-align: center;
-    margin: 20px;
+    margin: 50px 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+#ev-section h2 {
+    margin-bottom: 20px;
 }
 
 #evm-images img {
     margin: 10px;
-    border: 2px solid #ddd;
+    border: 2px solid #fff;
     border-radius: 5px;
-    cursor: pointer; /* Indicate the images are clickable */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-    padding-top: 60px; /* Location of the box */
+#evm-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
 }
 
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%; /* Can be adjusted */
-    max-width: 700px; /* Can be adjusted */
+#choose-candidate-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ffd700;
+    color: #004B87;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
-#caption {
-    margin: auto;
-    display: block;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
+#choose-candidate-btn:hover {
+    background-color: #ffa500;
 }
 
 footer {
-    background-color: #004B87;
-    color: white;
-    text-align: center;
+    background-color: rgba(0, 75, 135, 0.9);
     padding: 20px;
-    position: relative;
+    text-align: center;
 }
 
-footer h1 {
-    margin: 0;
+footer h2 {
+    margin-bottom: 10px;
 }
 
 footer p {
-    margin-top: 10px;
-    line-height: 1.5;
-}
-#abcd{
-    text-decoration: none;
-    text-align: center;
-    text-size-adjust: 30px;
-    color: red;
+    font-size: 0.9rem;
+    line-height: 1.6;
 }

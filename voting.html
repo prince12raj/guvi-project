@@ -9,31 +9,37 @@
 <body>
     <header>
         <nav id="navbar">
-            <a href="#" id="abc">Menu |</a>
+            <a href="#" id="abc">Menu</a>
             <a href="login.html">ONLINE VOTING SYSTEM</a>
-            <a href="#">| Toll free-1950 |</a>
-            <a href="#">Screen reader access |</a>
-            <button id="increase-font">A+</button>
-            <button id="decrease-font">A-</button>
-            <button id="hindi">Hindi me dekhe</button>
+            <a href="#">Toll Free: 1950</a>
+            <a href="#">Screen Reader Access</a>
+            <div id="nav-buttons">
+                <button id="increase-font">A+</button>
+                <button id="decrease-font">A-</button>
+                <button id="hindi">हिंदी में देखें</button>
+            </div>
         </nav>
     </header>
 
-    <hr color="pink">
+    <div class="banner">
+        <h1>Welcome to the Election Commission of India</h1>
+        <p>Your vote, your voice! Participate in shaping the future of our democracy.</p>
+    </div>
 
     <section id="ev-section">
-        <h1>Choose Your Candidate</h1>
+        <h2>Choose Your Candidate</h2>
         <div id="evm-images">
             <img src="https://www.eci.gov.in/newimg/EVM/1.jpg" height="200" alt="EVM Image 1" onclick="openModal(this)">
             <img src="https://www.eci.gov.in/newimg/EVM/2.jpg" height="200" alt="EVM Image 2" onclick="openModal(this)">
             <img src="https://www.eci.gov.in/newimg/EVM/3.jpg" height="200" alt="EVM Image 3" onclick="openModal(this)">
-            <img src="https://www.eci.gov.in/newimg/EVM/4.jpg" height="200" alt="EVM Image 4" onclick="openModal(this)"><br>
+            <img src="https://www.eci.gov.in/newimg/EVM/4.jpg" height="200" alt="EVM Image 4" onclick="openModal(this)">
             <img src="https://www.eci.gov.in/newimg/EVM/5.jpg" height="200" alt="EVM Image 5" onclick="openModal(this)">
             <img src="https://www.eci.gov.in/newimg/EVM/6.jpg" height="200" alt="EVM Image 6" onclick="openModal(this)">
             <img src="https://www.eci.gov.in/newimg/EVM/7.jpg" height="200" alt="EVM Image 7" onclick="openModal(this)">
-            <img src="https://www.eci.gov.in/newimg/EVM/8.jpg" height="200" alt="EVM Image 8" onclick="openModal(this)"><br>
+            <img src="https://www.eci.gov.in/newimg/EVM/8.jpg" height="200" alt="EVM Image 8" onclick="openModal(this)">
             <img src="https://www.eci.gov.in/newimg/EVM/9.png" height="200" alt="EVM Image 9" onclick="openModal(this)">
         </div>
+        <a id="choose-candidate-btn" href="candidate.html">Click Here to Choose Your Candidate</a>
     </section>
 
     <div id="image-modal" class="modal" onclick="closeModal()">
@@ -41,15 +47,14 @@
         <img class="modal-content" id="modal-image">
         <div id="caption"></div>
     </div>
-    <div id="but">
-        <a id = "abcd" href="candidate.html"><H1>CLICK HERE TO CHOSE YOUR CANDIDATE </H1></a>
-    </div>
 
     <footer class="footer">
-        <h1>ONLINE VOTING YOUR CANDIDATE</h1>
-        <p id="cc">
-            Voting systems are critical for the functioning of democracies and the representation of citizens' voices in governance. As technology evolves, the methods of voting continue to change, presenting both opportunities and challenges. A successful voting system must prioritize security, accessibility, and transparency while continually adapting to the needs of the electorate.
+        <h2>Online Voting System</h2>
+        <p>
+            Voting is the cornerstone of democracy, ensuring every citizen has a voice in shaping the nation's future. 
+            Our online voting system prioritizes security, accessibility, and transparency to create a trustworthy electoral process.
         </p>
+        <p>&copy; 2024 Election Commission of India | All Rights Reserved</p>
     </footer>
 
     <script>
