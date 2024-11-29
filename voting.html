@@ -3,74 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELECTION COMMISSION OF INDIA</title>
+    <title>Voting System</title>
     <link rel="stylesheet" href="voting.css">
-</head>
-<body>
-    <header>
-        <nav id="navbar">
-            <a href="#" id="abc">Menu</a>
-            <a href="login.html">ONLINE VOTING SYSTEM</a>
-            <a href="#">Toll Free: 1950</a>
-            <a href="#">Screen Reader Access</a>
-            <div id="nav-buttons">
-                <button id="increase-font">A+</button>
-                <button id="decrease-font">A-</button>
-                <button id="hindi">हिंदी में देखें</button>
-            </div>
-        </nav>
-    </header>
-
-    <div class="banner">
-        <h1>Welcome to the Election Commission of India</h1>
-        <p>Your vote, your voice! Participate in shaping the future of our democracy.</p>
-    </div>
-
-    <section id="ev-section">
-        <h2>Choose Your Candidate</h2>
-        <div id="evm-images">
-            <img src="https://www.eci.gov.in/newimg/EVM/1.jpg" height="200" alt="EVM Image 1" onclick="openModal(this)">
-            <img src="https://www.eci.gov.in/newimg/EVM/2.jpg" height="200" alt="EVM Image 2" onclick="openModal(this)">
-            <img src="https://www.eci.gov.in/newimg/EVM/3.jpg" height="200" alt="EVM Image 3" onclick="openModal(this)">
-            <img src="https://www.eci.gov.in/newimg/EVM/4.jpg" height="200" alt="EVM Image 4" onclick="openModal(this)">
-            <img src="https://www.eci.gov.in/newimg/EVM/5.jpg" height="200" alt="EVM Image 5" onclick="openModal(this)">
-            <img src="https://www.eci.gov.in/newimg/EVM/6.jpg" height="200" alt="EVM Image 6" onclick="openModal(this)">
-            <img src="https://www.eci.gov.in/newimg/EVM/7.jpg" height="200" alt="EVM Image 7" onclick="openModal(this)">
-            <img src="https://www.eci.gov.in/newimg/EVM/8.jpg" height="200" alt="EVM Image 8" onclick="openModal(this)">
-            <img src="https://www.eci.gov.in/newimg/EVM/9.png" height="200" alt="EVM Image 9" onclick="openModal(this)">
-        </div>
-        <a id="choose-candidate-btn" href="candidate.html">Click Here to Choose Your Candidate</a>
-    </section>
-
-    <div id="image-modal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-image">
-        <div id="caption"></div>
-    </div>
-
-    <footer class="footer">
-        <h2>Online Voting System</h2>
-        <p>
-            Voting is the cornerstone of democracy, ensuring every citizen has a voice in shaping the nation's future. 
-            Our online voting system prioritizes security, accessibility, and transparency to create a trustworthy electoral process.
-        </p>
-        <p>&copy; 2024 Election Commission of India | All Rights Reserved</p>
-    </footer>
-
     <script>
-        function openModal(img) {
-            const modal = document.getElementById("image-modal");
-            const modalImg = document.getElementById("modal-image");
-            const captionText = document.getElementById("caption");
-
-            modal.style.display = "block";
-            modalImg.src = img.src;
-            captionText.innerHTML = img.alt;
+        function toggleZoom(img) {
+            img.classList.toggle("zoomed");
         }
 
-        function closeModal() {
-            document.getElementById("image-modal").style.display = "none";
+        function goToCandidatePage() {
+            window.location.href = "candidate.html";
         }
     </script>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to the Voting System</h1>
+        <p>Your vote is your voice. Participate in democracy and make a difference.</p>
+        <div class="header-buttons">
+            <button onclick="window.location.href='hindi.html'">हिंदी में देखें</button>
+            <button onclick="alert('Help Section Coming Soon')">Help</button>
+            <button onclick="alert('FAQs Coming Soon')">FAQs</button>
+        </div>
+    </header>
+    
+
+    <main class="content">
+        <section class="introduction">
+            <h2>About the Voting System</h2>
+            <p>
+                Voting is the foundation of a democratic society. It allows citizens to choose their leaders and influence 
+                decision-making. Modern voting systems, such as Electronic Voting Machines (EVMs), ensure security and accuracy.
+            </p>
+        </section>
+
+        <section class="images">
+            <h2>Understanding Electronic Voting Machines (EVMs)</h2>
+            <div class="image-gallery">
+                <img src="https://www.eci.gov.in/newimg/EVM/1.jpg" alt="EVM Image 1" onclick="toggleZoom(this)">
+                <img src="https://www.eci.gov.in/newimg/EVM/2.jpg" alt="EVM Image 2" onclick="toggleZoom(this)">
+                <img src="https://www.eci.gov.in/newimg/EVM/3.jpg" alt="EVM Image 3" onclick="toggleZoom(this)">
+                <img src="https://www.eci.gov.in/newimg/EVM/4.jpg" alt="EVM Image 4" onclick="toggleZoom(this)">
+            </div>
+        </section>
+
+        <section class="details">
+            <h2>Why Voting Matters</h2>
+            <p>
+                Voting empowers individuals to have a say in governance. It strengthens democracy by ensuring representation.
+                Every vote counts, and by participating, you contribute to the betterment of society.
+            </p>
+            <p>
+                Be informed about the candidates and choose wisely to shape the future.
+            </p>
+        </section>
+
+        <div class="button-container">
+            <button onclick="goToCandidatePage()">Choose Your Candidate</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Voting System | Empowering Democracy</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+    
 </body>
 </html>
